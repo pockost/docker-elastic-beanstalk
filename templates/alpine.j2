@@ -1,0 +1,6 @@
+FROM python:{{ python_version }}-{{ os_version }}
+
+WORKDIR /app
+
+RUN apk add --no-cache git \
+    && pip install awsebcli=={{ eb_version }}
